@@ -1,0 +1,16 @@
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h1>{% block title %}Add user{% endblock %}</h1>
+
+<form method="post">
+  <p>Username<br><input name=name></p>
+  <p>Full name<br><input name=full_name></p>
+  <p>E-mail<br><input name=email value="{{email}}"></p>
+  <p><input type=submit></p>
+</form>
+
+{% endblock %}

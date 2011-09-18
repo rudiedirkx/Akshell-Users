@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Users{% endblock %}
+
+{% block content %}
+
+<table class="tbl">
+  <!-- <caption>{{users.length}} users</caption> -->
+  <thead>
+    <tr class="title">
+      <td colspan="3">{{users.length}} user(s) ({{page}} / {{pages}})</td>
+    </tr>
+    <tr>
+      <th>User name</th>
+      <th>Full name</th>
+      <th>E-mail</th>
+    </tr>
+  </thead>
+  <tbody class="zebra">
+    {% for user in users %}
+      <tr>
+        <td>{{user.name}}</td>
+        <td>{{user.full_name}}</td>
+        <td>{{user.email}}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<p><a href="/users/add">Add user</a></p>
+
+{% endblock %}

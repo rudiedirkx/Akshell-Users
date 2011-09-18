@@ -2,3 +2,39 @@
   The base stylesheet of your application.
   It should define rules common for all pages.
 */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 1rem;
+}
+p, table, ul, ol, h1, h2 {
+  margin: 0 0 1rem;
+}
+
+table.tbl {
+  border-spacing: 2px;
+  border: solid 1px #000;
+}
+table.tbl th,
+table.tbl td {
+  padding: 4px 6px;
+  border: 0;
+}
+table.tbl th {
+  background: #ddd;
+}
+table.tbl .title td,
+table.tbl td.title {
+  background: #bbb;
+  font-weight: bold;
+  text-align: center;
+}
+.zebra > *:nth-child(odd) {
+  background: #eee;
+}
+.zebra > *:nth-child(even) {
+  background: #ddd;
+}
